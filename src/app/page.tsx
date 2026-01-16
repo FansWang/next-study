@@ -1,4 +1,10 @@
 import Image from "next/image";
+import {Button} from "@/components/ui/button";
+
+function formatAddress(address: string | null) {
+  if (!address) return 'Connect Wallet';
+  return `${address.slice(0,6)}...${address.slice(-4)}`;
+}
 
 export default function Home() {
   return (
@@ -58,6 +64,7 @@ export default function Home() {
           >
             Documentation
           </a>
+          <Button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white">123</Button>
         </div>
       </main>
     </div>
